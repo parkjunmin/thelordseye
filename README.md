@@ -7,8 +7,10 @@
 
 > thelordseye searches and returns detailed information about devices that are directly connected to the internet [IoT] (Smart TV\'s, Fridges, Webcams, Traffic Lights etc).
 # Prerequisites
+* criminalip.io API Key
 * shodan.io API Key
 
+Get it [here](https://www.criminalip.io/)
 Get it [here](https://shodan.io)
 
 # Installation
@@ -31,7 +33,8 @@ $ chmod +x eye
 ```
 
 ```
-$ ./eye --auth [your-shodan-api-key]
+$ ./eye --criminalip-auth [your-criminalip-api-key]
+$ ./eye --shodan-auth [your-shodan-api-key]
 ```
 
 > *Your API key will be stored in a hidden .auth file*
@@ -39,7 +42,8 @@ $ ./eye --auth [your-shodan-api-key]
 # Optional Arguments
 | Flag          | MetaVar|                 Usage|
 | ------------- |:----------------------:|:---------:|
-| <code>-a/--auth</code>  |  **API key**  |  *api authentication with a valid shodan.io api key.* |
+| <code>-a/--shodan-auth</code>  |  **API key**  |  *api authentication with a valid shodan.io api key.* |
+| <code>-a/--criminalip-auth</code>  |  **API key**  |  *api authentication with a valid criminalip.io api key.* |
 | <code>-q/--query</code>  | **QUERY**    |  *search query*|
 | <code>-i/--ip</code>  |  **IP**  |  *return information relating to the specified IP address*  |
 | <code>-o/--output</code>      |   **FILENAME** |  *write output to a specified file (will not work with -r/--raw)*  |
